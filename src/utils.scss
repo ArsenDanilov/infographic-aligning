@@ -1,0 +1,66 @@
+@use 'vars' as *;
+
+@mixin xxxl() {
+  @media all and (max-width: $mq-xxxl) {
+    @content;
+  }
+}
+
+
+@mixin xxl() {
+  @media all and (max-width: $mq-xxl) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media all and (max-width: $mq-xl) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media all and (max-width: $mq-lg) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media all and (max-width: $mq-md) {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @media all and (max-width: $mq-sm) {
+    @content;
+  }
+}
+
+@mixin xs() {
+  @media all and (max-width: $mq-xs) {
+    @content;
+  }
+}
+
+@mixin xxs() {
+  @media all and (max-width: $mq-xxs) {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: 0) {
+  @media all and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin font-face($font-name, $font-style: normal, $font-weight: 400, $font-path) {
+  @font-face {
+    font-display: swap;
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: local($font-name), url('#{$font-path}.woff2') format('woff2');
+  }
+}

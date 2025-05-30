@@ -1,0 +1,67 @@
+$color-primary: #004d9b !default;
+$color-secondary: #0B223F;
+$color-attention: #ff0000;
+$color-white: #fff;
+$color-grey: #4f616c;
+$color-grey-light-1: #e9edef;
+$color-grey-light-2: #f5f5f5;
+$color-grey-light-3: #4f616c;
+$color-grey-light-4: #9dadb7;
+$color-grey-light-5: #f5f7f8;
+$color-black: black;
+$color-text-white: $color-white;
+$color-text-black: $color-black;
+$color-text-grey: $color-grey-light-3;
+$color-text-light: $color-grey-light-4;
+
+$color-btn: $color-primary;
+$color-btn-text: $color-white;
+$color-btn-hover: darken($color-btn, 5%);
+$color-btn-text-hover: $color-white;
+
+$transition-speed: 0.3s;
+$box-shadow-1: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+
+$mq-xxs: 360px;
+$mq-xs: 480px;
+$mq-sm: 576px;
+$mq-md: 768px;
+$mq-lg: 992px;
+$mq-xl: 1200px;
+$mq-xxl: 1400px;
+$mq-xxxl: 1700px;
+$mq-xxxxl: 1920px;
+
+$max-width: $mq-xxxl;
+
+$content-max-width: $mq-xl;
+
+:export {
+  $color-primary: #004d9b !default;
+  $color-white: #fff;
+  $color-grey: #4f616c;
+  $color-grey-light-1: #e9edef;
+  $color-grey-light-2: #f5f5f5;
+  $color-grey-light-3: #4f616c;
+  $color-grey-light-4: #9dadb7;
+  $color-black: black;
+  $color-text-white: $color-white;
+  $color-text-black: $color-black;
+  $color-text-grey: $color-grey-light-3;
+  $color-text-light: $color-grey-light-4;
+  $color-btn: $color-primary;
+  $color-btn-text: $color-white;
+  $color-btn-hover: darken($color-btn, 5%);
+  $color-btn-text-hover: $color-white;
+  $transition-speed: 0.3s;
+  $box-shadow-1: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  $mq-xxs: 360px;
+  $mq-xs: 480px;
+  $mq-sm: 576px;
+  $mq-md: 768px;
+  $mq-lg: 992px;
+  $mq-xl: 1200px;
+  $mq-xxl: 1400px;
+  $mq-xxxxl: 1920px;
+  $max-width: $mq-xxxxl;
+}

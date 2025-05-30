@@ -1,0 +1,105 @@
+@use 'utils' as *;
+@use 'vars' as *;
+
+@include font-face('Proxima', light, 300, '../fonts/proximanova_light');
+@include font-face('Proxima', regular, 400, '../fonts/proximanova_regular');
+@include font-face('Proxima', bold, 700, '../fonts/proximanova_bold');
+
+html {
+  min-width: $mq-xxs;
+  box-sizing: border-box;
+  * {
+    box-sizing: inherit;
+    &::after,
+    &::before {
+      box-sizing: inherit;
+    }
+  }
+}
+
+@include md() {
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.375rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+
+body {
+  color: $color-text-grey;
+}
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*добавляем смещение для ссылок-якорей из-за позиции шапки сайта*/
+a[name] {
+  position: relative;
+  top: -10rem;
+}
+
+hr {
+  height: 1px;
+  background-color: $color-grey-light-2;
+}
+
+/* Fixes */
+
+.gatsby-image-wrapper-constrained {
+  display: block !important;
+}
+
+/*добавляем отступы для всех картинок внутри контента,
+отменяем центровку для картинок вне компонента Image
+*/
+span[class='gatsby-resp-image-wrapper'] {
+  margin: 1.5rem 0;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+/*убираем линию и изменяем цвета кнопок в форме BitrixSimpleForm
+*/
+.b24-form-wrapper.b24-form-border-bottom {
+  border-bottom: 0px solid white !important;
+}
+
+.b24-form-btn {
+  background-color: $color-btn !important;
+}
+
+.b24-form-btn:hover {
+  background-color: darken($color-btn, 5%) !important;
+}
+
+.b24-form-btn-white {
+  background-color: $color-white !important;
+}
+
+.b24-form-btn-white:hover {
+  color: $color-white !important;
+}
+
+.b24-window-close {
+  background-color: $color-btn !important;
+}
+
+
+.b24-form-state-container .b24-form-loader,
+.b24-form-state-container .b24-form-state {
+  z-index: 9 !important;
+}
