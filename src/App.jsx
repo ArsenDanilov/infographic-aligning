@@ -1,11 +1,20 @@
 import Infographic from "./Infographic";
 
 function App() {
+  // const data = [
+  //   { id: 1, icon: "user", number: 210, about: "компаний из 8 стран" },
+  //   { id: 2, icon: "users", number: 8190, about: "посетителей" },
+  //   { id: 3, icon: "map", number: 2486, about: "уникальных посетителей" },
+  //   { id: 4, icon: "chair", number: `Примите участие в секторе`, about: "«Мебельные комплектующие и фурнитура»"},
+  //   { id: 5, icon: "chair", number: `NEW: Оборудование для производства`, about: "металлической мебели, стеллажей и дверей"},
+  // ];
+
   const data = [
-    { id: 1, icon: "user", number: 29537, about: "уникальных посетителей" },
-    { id: 2, icon: "users", number: 1100, about: "компаний участниц" },
-    { id: 3, icon: "chart-pie", number: `55000 м2`, about: "площадь экспозиции" },
-    { id: 4, icon: "volume-high", number: 150, about: "спикеров деловой программы" },
+    { id: 1, icon: "user", number: 210, about: "компаний из 8 стран" },
+    { id: 2, icon: "users", number: 8190, about: "посетителей" },
+    { id: 4, icon: "chair", number: `35 000+`, about: "кв. м"},
+    { id: 5, icon: "chair", number: `Тетрапентанпергидрофенантрен`, about: "Отдельный сектор – Робототехника"},
+    { id: 5, icon: "chair", number: ``, about: "Новая выставка ExpoCifra"},
   ];
 
   return (

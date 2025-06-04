@@ -3,22 +3,22 @@
 @use 'utils' as *;
 
 .infographic {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(min-content, 1fr);
+  justify-content: space-evenly;
+  align-items: flex-start;
   column-gap: 1em;
 }
 
 .item {
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: $color-grey-light-3;
   margin: 1rem 0;
   flex: 1;
 
   &:hover {
-    color: $color-primary;
+    color: $color-primary;  
   }
 
   &:hover .icon {
@@ -40,6 +40,12 @@
     box-sizing: border-box;
   }
 
+  .text__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .text {
     display: flex;
     flex-direction: column;
@@ -49,6 +55,8 @@
   .number {
     font-size: 1.4em;
     font-weight: 700;
+    margin-bottom: 0.15em;
+    word-break: break-all;
   }
 
   .title {
@@ -56,18 +64,30 @@
   }
 }
 
+
+
 @include xxl() {
   .item {
     flex-direction: column;
     text-align: center;
+    align-items: center;
 
     .icon {
-      margin: 0 0 0.2564em;
+      margin: 0 0 0.25em;
     }
   }
 }
 
 @include md() {
+
+  .infographic {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+
   .item {
     width: 50%;
     align-self: flex-start;
